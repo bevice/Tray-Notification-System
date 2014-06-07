@@ -2,6 +2,7 @@
 #define TRAYNOTIFICATIONMANAGER_H
 
 #include <QtCore>
+
 #include "traynotificationwidget.h"
 
 class TrayNotificationManager : public QObject
@@ -13,7 +14,7 @@ public slots:
     void removeFirst(TrayNotificationWidget *widget);
 
 public:
-    TrayNotificationManager();
+    TrayNotificationManager(QWidget *parent = 0);
     ~TrayNotificationManager();
     void append(TrayNotificationWidget *widget);
     void clear();

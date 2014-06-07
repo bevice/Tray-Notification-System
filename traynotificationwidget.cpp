@@ -1,5 +1,6 @@
 #include "traynotificationwidget.h"
-
+#include <QLabel>
+#include <QHBoxLayout>
 TrayNotificationWidget::TrayNotificationWidget(QPixmap pixmapIcon, QString headerText, QString messageText) : QWidget(0)
 {
     setWindowFlags(

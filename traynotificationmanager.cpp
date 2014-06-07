@@ -1,6 +1,8 @@
 #include "traynotificationmanager.h"
+#include <QApplication>
+#include <QDesktopWidget>
 
-TrayNotificationManager::TrayNotificationManager()
+TrayNotificationManager::TrayNotificationManager(QWidget *parent): QObject(parent)
 {
     notificationWidgets = new QList<TrayNotificationWidget*>();
     QDesktopWidget* desktopWidget = QApplication::desktop();
@@ -9,7 +11,7 @@ TrayNotificationManager::TrayNotificationManager()
     m_width = 280;
     m_height = 100;
     m_onScreenCount = 0;
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     m_startX = clientRect.width() - m_width;
     m_startY = 10;
     m_up = false;
