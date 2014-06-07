@@ -17,7 +17,7 @@ TrayNotificationManager::TrayNotificationManager(QWidget *parent): QObject(paren
     m_up = false;
 #endif
 
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
     m_startX = clientRect.width() - m_width;
     m_startY = 10;
     m_up = false;
